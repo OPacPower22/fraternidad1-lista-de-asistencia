@@ -5,15 +5,6 @@ document.getElementById('userForm').onsubmit = function(e) {
     const name = document.getElementById('name').value;
     const grade = document.getElementById('grade').value;
     const id = Date.now();
-
-    const isVisitor = document.getElementById("visitor").checked;
-
-    if (!name || (!isVisitor && !grade)) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-    
-    const user = { id, name, grade, date: new Date() };
     userList.push(user);
     
     generateQRCode(user);
