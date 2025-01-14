@@ -5,19 +5,14 @@ document.getElementById('userForm').onsubmit = function(e) {
     const name = document.getElementById('name').value;
     const grade = document.getElementById('grade').value;
     const id = Date.now();
+    
+    const user = { id, name, grade, date: new Date() };
     userList.push(user);
     
     generateQRCode(user);
     updateAttendanceList();
     document.getElementById('userForm').reset();
 };
-
-let qrData;
-    if (isVisitor) {
-      qrData = `Nombre: ${name}\nTipo: Visitante`;
-    } else {
-      qrData = `Nombre: ${name}\nGrado: ${grade}`;
-    }
 
 function generateQRCode(user) {
     const qrContainer = document.createElement('div');
