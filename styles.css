@@ -15,10 +15,23 @@ body {
     text-align: center;
 }
 
-input, select, button {
+select, button {
     margin: 10px 0;
     padding: 10px;
     width: 90%;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-flex;
+  align-content: space-evenly;
+  align-items: center;
+  text-align: justify;
+  display: block;
+  margin: auto;
+
 }
 
 button {
